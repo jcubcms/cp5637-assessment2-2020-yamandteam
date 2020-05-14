@@ -103,9 +103,9 @@ if ( ! function_exists( 'u3a_setup' ) ) :
 	}
 endif;
 add_action( 'after_setup_theme', 'u3a_setup' );
-
 function u3a_fonts_url() {
     $fonts_url = '';
+
     /*
      * translators: If there are characters in your language that are not supported
      * by source sans pro and PT serif, translate this to 'off'. Do not translate into your own language.
@@ -178,7 +178,7 @@ function u3a_scripts() {
     wp_enqueue_style('u3a-fonts',u3a_fonts_url());
 	wp_enqueue_style( 'u3a-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'u3a-style', 'rtl', 'replace' );
-    //wp_enqueue_style( 'u3a-style', get_template_directory_uri() . '/css/custom.css', array(), _S_VERSION );
+
 	wp_enqueue_script( 'u3a-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
 	wp_enqueue_script( 'u3a-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), _S_VERSION, true );
