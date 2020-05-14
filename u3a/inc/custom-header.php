@@ -24,8 +24,8 @@ function u3a_custom_header_setup() {
 			array(
 				'default-image'      => '',
 				'default-text-color' => '000000',
-				'width'              => 1000,
-				'height'             => 250,
+				'width'              => 1500,
+				'height'             => 700,
 				'flex-height'        => true,
 				'wp-head-callback'   => 'u3a_header_style',
 			)
