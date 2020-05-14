@@ -104,6 +104,37 @@ if ( ! function_exists( 'u3a_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'u3a_setup' );
 
+function u3a_fonts_url() {
+    $fonts_url = '';
+    /*
+     * translators: If there are characters in your language that are not supported
+     * by source sans pro and PT serif, translate this to 'off'. Do not translate into your own language.
+     */
+    $source_sans_pro = _x( 'on', 'source sans pro font: on or off', 'u3a' );
+    $pt_serif = _x( 'on', 'pt serif font: on or off', 'u3a' );
+    $font_families = array();
+    if ( 'off' !== $source_sans_pro ){
+        $font_families[]='Source Sans Pro:400, 400i,700,900';
+    }
+    if ( 'off' !== $pt_serif ){
+        $font_families[]='PT Serif:400, 400i,700,700i';
+    }
+
+    if ( in_array('on',array($source_sans_pro,$pt_serif)) ) {
+
+
+        $query_args = array(
+            'family'  => urlencode( implode( '|', $font_families ) ),
+            'subset'  => urlencode( 'latin,latin-ext' ),
+            'display' => urlencode( 'fallback' ),
+        );
+
+        $fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
+    }
+
+    return esc_url_raw( $fonts_url );
+}
+
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
@@ -143,9 +174,11 @@ add_action( 'widgets_init', 'u3a_widgets_init' );
  * Enqueue scripts and styles.
  */
 function u3a_scripts() {
+    //Enqueue google fonts:Source sans pro & PT serif
+    wp_enqueue_style('u3a-fonts',u3a_fonts_url());
 	wp_enqueue_style( 'u3a-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'u3a-style', 'rtl', 'replace' );
-
+    //wp_enqueue_style( 'u3a-style', get_template_directory_uri() . '/css/custom.css', array(), _S_VERSION );
 	wp_enqueue_script( 'u3a-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
 	wp_enqueue_script( 'u3a-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), _S_VERSION, true );
