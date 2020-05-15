@@ -41,16 +41,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
-
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
-
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
-
 /* Document
 	 ========================================================================== */
-
 /**
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
@@ -62,7 +58,6 @@ html {
 
 /* Sections
 	 ========================================================================== */
-
 /**
  * Remove the margin in all browsers.
  */
@@ -88,7 +83,6 @@ h1 {
 
 /* Grouping content
 	 ========================================================================== */
-
 /**
  * 1. Add the correct box sizing in Firefox.
  * 2. Show the overflow in Edge and IE.
@@ -110,7 +104,6 @@ pre {
 
 /* Text-level semantics
 	 ========================================================================== */
-
 /**
  * Remove the gray background on active links in IE 10.
  */
@@ -176,7 +169,6 @@ sup {
 
 /* Embedded content
 	 ========================================================================== */
-
 /**
  * Remove the border on images inside links in IE 10.
  */
@@ -186,7 +178,6 @@ img {
 
 /* Forms
 	 ========================================================================== */
-
 /**
  * 1. Change the font styles in all browsers.
  * 2. Remove the margin in Firefox and Safari.
@@ -332,7 +323,6 @@ textarea {
 
 /* Interactive
 	 ========================================================================== */
-
 /*
  * Add the correct display in Edge, IE 10+, and Firefox.
  */
@@ -349,7 +339,6 @@ summary {
 
 /* Misc
 	 ========================================================================== */
-
 /**
  * Add the correct display in IE 10+.
  */
@@ -374,9 +363,20 @@ select,
 optgroup,
 textarea {
 	color: #404040;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 1rem;
+	font-family: "PT Serif", Georgia, Cambria, "Times New Roman", Times, sans-serif;
+	font-size: 0.9rem;
 	line-height: 1.5;
+}
+
+@media screen and (min-width: 700px) {
+	body,
+	button,
+	input,
+	select,
+	optgroup,
+	textarea {
+		font-size: 1rem;
+	}
 }
 
 h1,
@@ -386,6 +386,31 @@ h4,
 h5,
 h6 {
 	clear: both;
+	font-family: "Source Sans Pro, sans-serif;", "Lucida Grande", "Lucida sans Unicode", "Lucida Sans", Arial, serifgitgit;
+}
+
+h1 {
+	font-size: 3em;
+}
+
+h2 {
+	font-size: 2.6em;
+}
+
+h3 {
+	font-size: 2.2em;
+}
+
+h4 {
+	font-size: 1.8em;
+}
+
+h5 {
+	font-size: 1.4em;
+}
+
+h6 {
+	font-size: 1em;
 }
 
 p {
@@ -445,7 +470,6 @@ big {
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
-
 /* Inherit box-sizing to more easily change it's value on a component level.
 @link http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 *,
@@ -502,7 +526,7 @@ img {
 }
 
 figure {
-	margin: 1em 0;
+	margin: 0;
 }
 
 table {
@@ -534,8 +558,7 @@ input[type="submit"]:hover {
 	border-color: #ccc #bbb #aaa;
 }
 
-button:active,
-button:focus,
+button:active, button:focus,
 input[type="button"]:active,
 input[type="button"]:focus,
 input[type="reset"]:active,
@@ -597,7 +620,6 @@ textarea {
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
-
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
@@ -609,9 +631,7 @@ a:visited {
 	color: #800080;
 }
 
-a:hover,
-a:focus,
-a:active {
+a:hover, a:focus, a:active {
 	color: #191970;
 }
 
@@ -619,116 +639,43 @@ a:focus {
 	outline: thin dotted;
 }
 
-a:hover,
-a:active {
+a:hover, a:active {
 	outline: 0;
 }
 
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
-.main-navigation {
-	display: block;
-	width: 100%;
-}
-
-.main-navigation ul {
-	display: none;
-	list-style: none;
-	margin: 0;
-	padding-left: 0;
-}
-
-.main-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	float: left;
-	position: absolute;
-	top: 100%;
-	left: -999em;
-	z-index: 99999;
-}
-
-.main-navigation ul ul ul {
-	left: -999em;
-	top: 0;
-}
-
-.main-navigation ul ul li:hover > ul,
-.main-navigation ul ul li.focus > ul {
-	display: block;
-	left: auto;
-}
-
-.main-navigation ul ul a {
-	width: 200px;
-}
-
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
-	left: auto;
-}
-
-.main-navigation li {
-	position: relative;
-}
-
-.main-navigation a {
-	display: block;
-	text-decoration: none;
-}
-
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
-}
-
-@media screen and (min-width: 37.5em) {
-
-	.menu-toggle {
-		display: none;
-	}
-
-	.main-navigation ul {
-		display: flex;
-	}
-}
-
-.site-main .comment-navigation,
-.site-main
-.posts-navigation,
-.site-main
+.site-main .comment-navigation, .site-main
+.posts-navigation, .site-main
 .post-navigation {
 	margin: 0 0 1.5em;
-}
-
-.comment-navigation .nav-links,
-.posts-navigation .nav-links,
-.post-navigation .nav-links {
-	display: flex;
+	overflow: hidden;
 }
 
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
 .post-navigation .nav-previous {
-	flex: 1 0 50%;
+	float: left;
+	width: 50%;
 }
 
 .comment-navigation .nav-next,
 .posts-navigation .nav-next,
 .post-navigation .nav-next {
-	text-align: end;
-	flex: 1 0 50%;
+	float: right;
+	text-align: right;
+	width: 50%;
 }
 
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
-
 /* Text meant only for screen readers. */
 .screen-reader-text {
 	border: 0;
 	clip: rect(1px, 1px, 1px, 1px);
+	-webkit-clip-path: inset(50%);
 	clip-path: inset(50%);
 	height: 1px;
 	margin: -1px;
@@ -744,6 +691,7 @@ a:active {
 	border-radius: 3px;
 	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 	clip: auto !important;
+	-webkit-clip-path: none;
 	clip-path: none;
 	color: #21759b;
 	display: block;
@@ -788,19 +736,303 @@ a:active {
 }
 
 /*--------------------------------------------------------------
-# Widgets
+# Content
 --------------------------------------------------------------*/
-.widget {
-	margin: 0 0 1.5em;
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+.site-main {
+	padding: 1.5em;
 }
 
-.widget select {
-	max-width: 100%;
+@media screen and (min-width: 650px) {
+	.site-main {
+		padding: 2em;
+	}
+}
+
+@media screen and (min-width: 900px) {
+	.site-main {
+		padding: 1.5em;
+	}
 }
 
 /*--------------------------------------------------------------
-# Content
---------------------------------------------------------------*/
+## header
+   --------------------------------------------------------------*/
+.header-image {
+	max-height: 60vh;
+	overflow: hidden;
+}
+
+.header-image img {
+	display: block;
+	width: 100vw;
+}
+
+.site-header {
+	position: relative;
+	padding: 1em;
+	font-family: "Source Sans Pro, sans-serif;", "Lucida Grande", "Lucida sans Unicode", "Lucida Sans", Arial, serifgitgit;
+	color: #00d082;
+	background-color: #39CCCC;
+}
+
+@media screen and (min-width: 650px) {
+	.site-header {
+		padding: 1.5em;
+	}
+}
+
+.site-branding {
+	min-height: 70px;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.custom-logo-link {
+	margin-right: 1em;
+}
+
+.custom-logo-link img {
+	display: block;
+	height: 70px;
+	width: auto;
+}
+
+.site-branding-text {
+
+	display: block;
+	flex-direction: column;
+	justify-content: center;
+	margin-left: 1em;
+}
+
+.site-title {
+	font-size: 1.5em;
+	margin: 0;
+	padding: 0;
+	line-height: 1em;
+}
+
+.site-title a {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.site-title a:hover, .site-title afocus {
+	text-decoration: underline;
+}
+
+.site-description {
+	color: #f10426;
+	font-size: 1em;
+	font-style: italic;
+	font-weight: 900;
+	text-shadow: 1px 1px #2dd51a;
+}
+
+@media screen and (min-width: 900px) {
+	.site-header {
+		display: -ms-flexbox;
+		display: flex;
+		justify-content: space-between;
+	}
+	.site-branding {
+		width: 35%;
+	}
+	.main-navigation {
+		width: 65%;
+	}
+}
+
+/* header menu  or primary menu*/
+.main-navigation {
+	display: block;
+	font-family: "Source Sans Pro, sans-serif;", "Lucida Grande", "Lucida sans Unicode", "Lucida Sans", Arial, serifgitgit;
+	font-weight: 400;
+	clear: left;
+}
+
+.main-navigation ul {
+	display: none;
+	list-style: none;
+	margin: 0;
+	padding-top: 1em;
+	padding-left: 0;
+}
+
+.main-navigation ul ul {
+	display: none;
+	top: 1.5em;
+	z-index: 99999;
+}
+
+.main-navigation ul ul ul {
+	top: 0;
+}
+
+.main-navigation ul ul li {
+	padding-left: 1em;
+}
+
+.main-navigation ul ul li:hover > ul,
+.main-navigation ul ul li.focus > ul {
+	left: 100%;
+}
+
+.main-navigation ul ul a {
+	width: 200px;
+}
+
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
+	left: auto;
+}
+
+.main-navigation li {
+	position: relative;
+}
+
+.main-navigation a {
+	display: inline-block;
+	width: 100%;
+	padding: .5em 1em .5em 0;
+	text-decoration: none;
+	color: #fff;
+}
+
+.main-navigation a:hover,
+.main-navigation a:focus {
+	text-decoration: underline;
+}
+
+.main-navigation .menu-item-has-children,
+.main-navigation .page_item_has_children {
+	min-width: 218px;
+}
+
+.main-navigation .menu-item-has-children > a,
+.main-navigation .page_item_has_children > a {
+	padding-right: 2em;
+}
+
+button.dropdown-toggle {
+	position: absolute;
+	right: 0;
+	border: none;
+	background: transparent;
+	color:#ffffff;
+	font-weight: bold;
+	font-size:1.5em;
+	line-height: 1.5em;
+	padding: .4em 1em .4em .5em;
+	margin-top: -0.5em;
+	margin-right: -0.5em;
+
+}
+.main-navigation button.dropdown-toggle:focus
+{
+	outline: transparent;
+}
+
+.menu-toggle {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin-top: 0;
+	margin-right: 0;
+	display: block;
+	margin: 1.2em 1.2em 0 0;
+	padding: .6em .8em;
+	font-size: 80%;
+	text-transform: uppercase;
+	color: gray;
+	font-weight: bold;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.menu-toggle:focus{
+	outline: transparent;
+}
+
+/* Toggle small menu and children on */
+.toggled-on ul,
+.sub-menu.toggled-on {
+	display: block;
+}
+
+@media screen and (min-width: 650px) {
+	.menu-toggle {
+		display: none;
+	}
+
+	.main-navigation .menu-item-has-children > a,
+	.main-navigation .page_item_has_children > a {
+		padding-right: 2em;
+		background: rgba(255, 255, 255, 0.1);
+	}
+
+	.main-navigation button.dropdown-toggle {
+		position: absolute;
+		right: 0;
+		margin-top: -0.5em;
+		margin-right: -0.5em;
+		border: none;
+		background: transparent;
+		color: #ffffff;
+		font-weight: bold;
+		font-size: 1.5em;
+		padding: .4em 1em .4em .5em;
+
+	}
+
+	.main-navigation button.dropdown-toggle:focus {
+		outline: transparent;
+	}
+
+	.main-navigation ul {
+		display: block;
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.main-navigation ul ul {
+
+		flex-direction: column;
+		background: rgba(255, 255, 255, 0.1);
+		margin-left: 0;
+	}
+
+	.main-navigation ul ul li {
+		padding-left: 0;
+	}
+
+	.main-navigation ul ul li a {
+		width: 218px;
+		background: none;
+	}
+
+	.main-navigation ul li a {
+		padding: .4em 1em;
+
+	}
+
+	.main-navigation ul li.current-menu-item a {
+
+		background-color: #211f20;
+
+
+	}
+}
+@media screen and (min-width: 900px) {
+	.main-navigation ul {
+		-ms-flex-pack: end;
+		justify-content: flex-end;
+		padding-top: 0;
+
+	}
+}
 
 /*--------------------------------------------------------------
 ## Posts and pages
@@ -841,9 +1073,19 @@ a:active {
 }
 
 /*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.widget {
+	margin: 0 0 1.5em;
+}
+
+.widget select {
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/
-
 /* Hide the Posts Navigation and the Footer when Infinite Scroll is in use. */
 .infinite-scroll .posts-navigation,
 .infinite-scroll.neverending .site-footer {
@@ -906,6 +1148,7 @@ object {
 --------------------------------------------------------------*/
 .gallery {
 	margin-bottom: 1.5em;
+	display: -ms-grid;
 	display: grid;
 	grid-gap: 1.5em;
 }
@@ -915,7 +1158,6 @@ object {
 	text-align: center;
 	width: 100%;
 }
-
 .gallery-columns-2 {
 	grid-template-columns: repeat(2, 1fr);
 }
@@ -947,6 +1189,11 @@ object {
 .gallery-columns-9 {
 	grid-template-columns: repeat(9, 1fr);
 }
+
+.gallery-caption {
+	display: block;
+}
+
 
 .gallery-caption {
 	display: block;
