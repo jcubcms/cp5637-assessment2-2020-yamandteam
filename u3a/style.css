@@ -775,7 +775,7 @@ a:hover, a:active {
 	padding: 1em;
 	font-family: "Source Sans Pro, sans-serif;", "Lucida Grande", "Lucida sans Unicode", "Lucida Sans", Arial, serifgitgit;
 	color: #00d082;
-	background-color: #090600;
+	background-color: #39CCCC;
 }
 
 @media screen and (min-width: 650px) {
@@ -801,11 +801,9 @@ a:hover, a:active {
 }
 
 .site-branding-text {
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-direction: column;
+
+	display: block;
 	flex-direction: column;
-	-ms-flex-pack: center;
 	justify-content: center;
 	margin-left: 1em;
 }
@@ -819,11 +817,10 @@ a:hover, a:active {
 
 .site-title a {
 	text-decoration: none;
-	color: #00d082;
+	color: #ffffff;
 }
 
 .site-title a:hover, .site-title afocus {
-	color: #f61414;
 	text-decoration: underline;
 }
 
@@ -839,7 +836,6 @@ a:hover, a:active {
 	.site-header {
 		display: -ms-flexbox;
 		display: flex;
-		-ms-flex-pack: justify;
 		justify-content: space-between;
 	}
 	.site-branding {
@@ -925,23 +921,39 @@ button.dropdown-toggle {
 	position: absolute;
 	right: 0;
 	border: none;
-	background: red;
-	color: gray;
+	background: transparent;
+	color:#ffffff;
+	font-weight: bold;
+	font-size:1.5em;
 	line-height: 1.5em;
 	padding: .4em 1em .4em .5em;
+	margin-top: -0.5em;
+	margin-right: -0.5em;
+
+}
+.main-navigation button.dropdown-toggle:focus
+{
+	outline: transparent;
 }
 
 .menu-toggle {
 	position: absolute;
 	top: 0;
 	right: 0;
+	margin-top: 0;
+	margin-right: 0;
 	display: block;
 	margin: 1.2em 1.2em 0 0;
 	padding: .6em .8em;
 	font-size: 80%;
 	text-transform: uppercase;
-	color: red;
+	color: gray;
+	font-weight: bold;
 	border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.menu-toggle:focus{
+	outline: transparent;
 }
 
 /* Toggle small menu and children on */
@@ -954,58 +966,71 @@ button.dropdown-toggle {
 	.menu-toggle {
 		display: none;
 	}
+
 	.main-navigation .menu-item-has-children > a,
 	.main-navigation .page_item_has_children > a {
 		padding-right: 2em;
 		background: rgba(255, 255, 255, 0.1);
 	}
+
 	.main-navigation button.dropdown-toggle {
 		position: absolute;
 		right: 0;
-		margin-top: 1em;
-		margin-right: 1em;
+		margin-top: -0.5em;
+		margin-right: -0.5em;
 		border: none;
-		background: red;
-		line-height: 1.5em;
+		background: transparent;
+		color: #ffffff;
+		font-weight: bold;
+		font-size: 1.5em;
 		padding: .4em 1em .4em .5em;
+
 	}
+
+	.main-navigation button.dropdown-toggle:focus {
+		outline: transparent;
+	}
+
 	.main-navigation ul {
 		display: block;
-		display: -ms-flexbox;
 		display: flex;
-		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
 	}
+
 	.main-navigation ul ul {
-		-ms-flex-direction: column;
+
 		flex-direction: column;
 		background: rgba(255, 255, 255, 0.1);
 		margin-left: 0;
 	}
+
 	.main-navigation ul ul li {
 		padding-left: 0;
 	}
+
 	.main-navigation ul ul li a {
 		width: 218px;
 		background: none;
 	}
+
 	.main-navigation ul li a {
 		padding: .4em 1em;
+
+	}
+
+	.main-navigation ul li.current-menu-item a {
+
+		background-color: #211f20;
+
+
 	}
 }
-
 @media screen and (min-width: 900px) {
 	.main-navigation ul {
 		-ms-flex-pack: end;
 		justify-content: flex-end;
 		padding-top: 0;
-		/* If you want dropdowns to open on hover, uncomment this: */
-		/*
-      li:hover > ul,
-        li:focus > ul {
-        display: block;
-      }
-      */
+
 	}
 }
 
