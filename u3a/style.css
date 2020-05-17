@@ -1083,6 +1083,8 @@ button.dropdown-toggle {
 	color: #fff;
 	text-align: center;
 	min-height: 4em;
+	float:left;
+	width:100%;
 
 
 
