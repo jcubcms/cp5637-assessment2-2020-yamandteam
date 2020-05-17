@@ -1072,6 +1072,24 @@ button.dropdown-toggle {
 	display: block;
 }
 
+
+/*--------------------------------------------------------------
+## Footer
+--------------------------------------------------------------*/
+.site-footer {
+	background: #39CCCC;
+	padding: 1em;
+	position:relative;
+	color: #fff;
+	text-align: center;
+	min-height: 4em;
+
+
+
+}
+
+
+
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
@@ -1198,3 +1216,4 @@ object {
 .gallery-caption {
 	display: block;
 }
+
