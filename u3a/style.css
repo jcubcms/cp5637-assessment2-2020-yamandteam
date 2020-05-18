@@ -51,6 +51,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+
 html {
 	line-height: 1.15;
 	-webkit-text-size-adjust: 100%;
@@ -64,6 +65,8 @@ html {
 body {
 	margin: 0;
 }
+
+
 
 /**
  * Render the `main` element consistently in IE.
@@ -118,7 +121,6 @@ a {
 abbr[title] {
 	border-bottom: none;
 	text-decoration: underline;
-	text-decoration: underline dotted;
 }
 
 /**
@@ -166,6 +168,8 @@ sub {
 sup {
 	top: -0.5em;
 }
+
+
 
 /* Embedded content
 	 ========================================================================== */
@@ -386,7 +390,7 @@ h4,
 h5,
 h6 {
 	clear: both;
-	font-family: "Source Sans Pro, sans-serif;", "Lucida Grande", "Lucida sans Unicode", "Lucida Sans", Arial, serifgitgit;
+
 }
 
 h1 {
@@ -425,7 +429,33 @@ i {
 }
 
 blockquote {
-	margin: 0 1.5em;
+	position: relative;
+	margin: 0;
+	background: #d0d9dc;
+	padding: 2em 2em .5em 5em;
+	font-style: italic;
+}
+
+blockquote:before {
+	position: absolute;
+	top: -.2em;
+	left: -.13em;
+	content: "“";
+	font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-size: 10em;
+	line-height: 100%;
+	color: #f6f1f1;
+
+}
+blockquote >p{
+	padding-left: 2em;
+	padding-top: 0.5em;
+	font-size: 1.2em;
+
+}
+blockquote > cite{
+	padding-left: 2em;
+	padding-top: 0.5em;
 }
 
 address {
@@ -513,7 +543,7 @@ li > ol {
 }
 
 dt {
-	font-weight: 700;
+	font-weight: bold;
 }
 
 dd {
@@ -530,8 +560,46 @@ figure {
 }
 
 table {
+	border-collapse: collapse;
 	margin: 0 0 1.5em;
 	width: 100%;
+
+
+}
+
+ th{
+	border-bottom: 2px solid #bbb;
+	padding-bottom: .5em;
+}
+
+td,
+th {
+	vertical-align: top;
+}
+
+th {
+	padding: .4em;
+	text-align: left;
+
+}
+
+tr {
+	border: 1px solid #a59595;
+}
+
+td {
+	padding: .4em;
+	border: 1px solid #a59595;
+}
+
+th:first-child,
+td:first-child {
+	padding-left: 0;
+}
+
+th:last-child,
+td:last-child {
+	padding-right: 0;
 }
 
 /*--------------------------------------------------------------
@@ -632,7 +700,10 @@ a:visited {
 }
 
 a:hover, a:focus, a:active {
-	color: #191970;
+	color: #e81131;
+
+
+
 }
 
 a:focus {
@@ -646,8 +717,8 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
-.site-main .comment-navigation, .site-main
-.posts-navigation, .site-main
+.site-main .comment-navigation, .site-main,
+.posts-navigation, .site-main,
 .post-navigation {
 	margin: 0 0 1.5em;
 	overflow: hidden;
@@ -658,6 +729,12 @@ a:hover, a:active {
 .post-navigation .nav-previous {
 	float: left;
 	width: 50%;
+	font-size: 1.1em;
+	text-decoration: underline;
+	font-weight: bold;
+	text-transform: uppercase;
+
+
 }
 
 .comment-navigation .nav-next,
@@ -666,6 +743,12 @@ a:hover, a:active {
 	float: right;
 	text-align: right;
 	width: 50%;
+	font-size: 1.1em;
+	text-decoration: underline;
+	font-weight: bold;
+	text-transform: uppercase;
+
+
 }
 
 /*--------------------------------------------------------------
@@ -675,7 +758,6 @@ a:hover, a:active {
 .screen-reader-text {
 	border: 0;
 	clip: rect(1px, 1px, 1px, 1px);
-	-webkit-clip-path: inset(50%);
 	clip-path: inset(50%);
 	height: 1px;
 	margin: -1px;
@@ -691,7 +773,6 @@ a:hover, a:active {
 	border-radius: 3px;
 	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 	clip: auto !important;
-	-webkit-clip-path: none;
 	clip-path: none;
 	color: #21759b;
 	display: block;
@@ -735,27 +816,8 @@ a:hover, a:active {
 	margin-bottom: 1.5em;
 }
 
-/*--------------------------------------------------------------
-# Content
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-## Posts and pages
---------------------------------------------------------------*/
-.site-main {
-	padding: 1.5em;
-}
 
-@media screen and (min-width: 650px) {
-	.site-main {
-		padding: 2em;
-	}
-}
 
-@media screen and (min-width: 900px) {
-	.site-main {
-		padding: 1.5em;
-	}
-}
 
 /*--------------------------------------------------------------
 ## header
@@ -773,7 +835,7 @@ a:hover, a:active {
 .site-header {
 	position: relative;
 	padding: 1em;
-	font-family: "Source Sans Pro, sans-serif;", "Lucida Grande", "Lucida sans Unicode", "Lucida Sans", Arial, serifgitgit;
+	/*font-family: "Source Sans Pro, sans-serif;", "Lucida Grande", "Lucida sans Unicode", "Lucida Sans", Arial, serifgitgit;*/
 	color: #00d082;
 	background-color: #39CCCC;
 }
@@ -820,7 +882,7 @@ a:hover, a:active {
 	color: #ffffff;
 }
 
-.site-title a:hover, .site-title afocus {
+.site-title a:hover, .site-title a:focus {
 	text-decoration: underline;
 }
 
@@ -849,7 +911,7 @@ a:hover, a:active {
 /* header menu  or primary menu*/
 .main-navigation {
 	display: block;
-	font-family: "Source Sans Pro, sans-serif;", "Lucida Grande", "Lucida sans Unicode", "Lucida Sans", Arial, serifgitgit;
+	/*font-family: "Source Sans Pro, sans-serif;", "Lucida Grande", "Lucida sans Unicode", "Lucida Sans", Arial, serifgitgit;*/
 	font-weight: 400;
 	clear: left;
 }
@@ -940,8 +1002,6 @@ button.dropdown-toggle {
 	position: absolute;
 	top: 0;
 	right: 0;
-	margin-top: 0;
-	margin-right: 0;
 	display: block;
 	margin: 1.2em 1.2em 0 0;
 	padding: .6em .8em;
@@ -992,7 +1052,7 @@ button.dropdown-toggle {
 	}
 
 	.main-navigation ul {
-		display: block;
+		/*display: block;*/
 		display: flex;
 		flex-wrap: wrap;
 	}
@@ -1035,10 +1095,27 @@ button.dropdown-toggle {
 }
 
 /*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
+.site-main {
+	padding: 1.5em;
+}
+
+@media screen and (min-width: 700px) {
+	.site-main {
+		padding: 2em;
+	}
+}
+
 .sticky {
 	display: block;
+}
+
+.hentry {
+	margin: 0 0 1.5em;
 }
 
 .post,
@@ -1046,20 +1123,96 @@ button.dropdown-toggle {
 	margin: 0 0 1.5em;
 }
 
-.updated:not(.published) {
+.byline,.updated:not(.published) {
 	display: none;
 }
+
 
 .page-content,
 .entry-content,
 .entry-summary {
 	margin: 1.5em 0 0;
+
 }
 
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+
 }
+.entry-header{
+font-family: "Source Sans Pro, sans-serif;", "Lucida Grande", "Lucida sans Unicode", "Lucida Sans", Arial, serifgitgit;
+}
+.cat-links{
+	font-weight:bold;
+}
+.cat-links  a{
+	text-decoration:none;
+	color: #f14906;
+	text-transform: uppercase;
+
+}
+.cat-links  a:focus,.cat-links a:hover{
+	background-color: #c1c6bf;
+
+}
+
+.entry-title{
+	font-size: 2.5em;
+}
+.entry-title a:focus, .entry-title a:hover {
+	border-bottom: 5px solid #89242c;
+}
+@media screen and (min-width: 600px){
+	.entry-title {
+		margin: 0.25em 0 0.5em;
+        font-size: 3em;
+	}
+	a{
+		text-decoration: none;
+
+	}
+	a:focus,a:hover{
+	/*border-bottom: 5px solid black;*/
+	}
+}
+
+
+.entry-meta a{
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.byline:after{
+	content:"|";
+	margin:0 0.5em;
+	font-weight: bold;
+
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.comments-link::before,
+.edit-link::before {
+	content: "|";
+	margin: 0 .5em;
+	font-weight: bold;
+}
+
+
+.entry-meta a:focus, .entry-meta a:hover,
+.entry-footer a:focus,
+.entry-footer a:hover,.nav-previous a:focus,.nav-previous a:hover {
+	color: #f305a4;
+
+}
+
+
+
+
 
 /*--------------------------------------------------------------
 ## Comments
@@ -1178,42 +1331,37 @@ object {
 	text-align: center;
 	width: 100%;
 }
-.gallery-columns-2 {
-	grid-template-columns: repeat(2, 1fr);
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
 }
 
-.gallery-columns-3 {
-	grid-template-columns: repeat(3, 1fr);
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33%;
 }
 
-.gallery-columns-4 {
-	grid-template-columns: repeat(4, 1fr);
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
 }
 
-.gallery-columns-5 {
-	grid-template-columns: repeat(5, 1fr);
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
 }
 
-.gallery-columns-6 {
-	grid-template-columns: repeat(6, 1fr);
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
 }
 
-.gallery-columns-7 {
-	grid-template-columns: repeat(7, 1fr);
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
 }
 
-.gallery-columns-8 {
-	grid-template-columns: repeat(8, 1fr);
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
 }
 
-.gallery-columns-9 {
-	grid-template-columns: repeat(9, 1fr);
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
 }
-
-.gallery-caption {
-	display: block;
-}
-
 
 .gallery-caption {
 	display: block;
