@@ -431,7 +431,7 @@ i {
 blockquote {
 	position: relative;
 	margin: 0;
-	background: #9aa9af;
+	background: #d0d9dc;
 	padding: 2em 2em .5em 5em;
 	font-style: italic;
 }
@@ -729,6 +729,12 @@ a:hover, a:active {
 .post-navigation .nav-previous {
 	float: left;
 	width: 50%;
+	font-size: 1.1em;
+	text-decoration: underline;
+	font-weight: bold;
+	text-transform: uppercase;
+
+
 }
 
 .comment-navigation .nav-next,
@@ -737,6 +743,12 @@ a:hover, a:active {
 	float: right;
 	text-align: right;
 	width: 50%;
+	font-size: 1.1em;
+	text-decoration: underline;
+	font-weight: bold;
+	text-transform: uppercase;
+
+
 }
 
 /*--------------------------------------------------------------
@@ -1081,6 +1093,7 @@ button.dropdown-toggle {
 
 	}
 }
+
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
@@ -1131,7 +1144,6 @@ button.dropdown-toggle {
 font-family: "Source Sans Pro, sans-serif;", "Lucida Grande", "Lucida sans Unicode", "Lucida Sans", Arial, serifgitgit;
 }
 .cat-links{
-	font-size:1.1em;
 	font-weight:bold;
 }
 .cat-links  a{
@@ -1149,7 +1161,7 @@ font-family: "Source Sans Pro, sans-serif;", "Lucida Grande", "Lucida sans Unico
 	font-size: 2.5em;
 }
 .entry-title a:focus, .entry-title a:hover {
-	border-bottom: 5px solid #f305a4;
+	border-bottom: 5px solid #89242c;
 }
 @media screen and (min-width: 600px){
 	.entry-title {
@@ -1170,9 +1182,7 @@ font-family: "Source Sans Pro, sans-serif;", "Lucida Grande", "Lucida sans Unico
 	font-weight: bold;
 	text-decoration: none;
 }
-.entry-meta a:hover{
-	color:red;
-}
+
 .byline:after{
 	content:"|";
 	margin:0 0.5em;
@@ -1185,12 +1195,6 @@ font-family: "Source Sans Pro, sans-serif;", "Lucida Grande", "Lucida sans Unico
 	display: inline;
 }
 
-/*.posted-on:after{
-	content:"|";
-	margin:0 0.5em;
-	font-weight: bold;
-
-}*/
 .comments-link::before,
 .edit-link::before {
 	content: "|";
@@ -1203,13 +1207,11 @@ font-family: "Source Sans Pro, sans-serif;", "Lucida Grande", "Lucida sans Unico
 .entry-footer a:focus,
 .entry-footer a:hover,.nav-previous a:focus,.nav-previous a:hover {
 	color: #f305a4;
-	/*border-bottom: 3px solid #b51c35;*/
+
 }
 
 
-.entry-meta,.entry-footer{
-	font-size: 1.1em;
-}
+
 
 
 /*--------------------------------------------------------------
@@ -1329,42 +1331,37 @@ object {
 	text-align: center;
 	width: 100%;
 }
-.gallery-columns-2 {
-	grid-template-columns: repeat(2, 1fr);
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
 }
 
-.gallery-columns-3 {
-	grid-template-columns: repeat(3, 1fr);
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33%;
 }
 
-.gallery-columns-4 {
-	grid-template-columns: repeat(4, 1fr);
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
 }
 
-.gallery-columns-5 {
-	grid-template-columns: repeat(5, 1fr);
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
 }
 
-.gallery-columns-6 {
-	grid-template-columns: repeat(6, 1fr);
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
 }
 
-.gallery-columns-7 {
-	grid-template-columns: repeat(7, 1fr);
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
 }
 
-.gallery-columns-8 {
-	grid-template-columns: repeat(8, 1fr);
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
 }
 
-.gallery-columns-9 {
-	grid-template-columns: repeat(9, 1fr);
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
 }
-
-.gallery-caption {
-	display: block;
-}
-
 
 .gallery-caption {
 	display: block;
