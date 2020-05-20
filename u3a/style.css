@@ -394,11 +394,11 @@ h6 {
 }
 
 h1 {
-	font-size: 3em;
+	font-size: 2.6em;
 }
 
 h2 {
-	font-size: 2.6em;
+	font-size: 2.4em;
 }
 
 h3 {
@@ -817,6 +817,58 @@ a:hover, a:active {
 }
 
 
+/*--------------------------------------------------------------
+## Global layouts
+--------------------------------------------------------------*/
+.site-content {
+	padding: 1em;
+}
+
+@media screen and (min-width: 600px) {
+	.site-content {
+		padding: 2em;
+	}
+}
+
+
+.site-content {
+	max-width:1080px;
+	margin: 0 auto;
+}
+
+@media screen and (min-width: 900px) {
+	.has-sidebar .hentry {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	.has-sidebar .hentry .entry-header {
+		width: 100%;
+		flex: 1 0 100%;
+	}
+	.has-sidebar .hentry .post-content {
+		width: 65%;
+	}
+	.has-sidebar .hentry .widget-area {
+		width: 30%;
+	}
+}
+
+@media screen and (min-width: 900px) {
+	.no-sidebar .post-content__wrap {
+		display: flex;
+		justify-content: space-between;
+	}
+	.no-sidebar .post-content__wrap .entry-meta {
+		width: 30%;
+	}
+	.no-sidebar .post-content__wrap .post-content__body {
+		width: 70%;
+	}
+}
+
+
+
 
 
 /*--------------------------------------------------------------
@@ -1104,7 +1156,7 @@ button.dropdown-toggle {
 	padding: 1.5em;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 600px) {
 	.site-main {
 		padding: 2em;
 	}
@@ -1114,9 +1166,7 @@ button.dropdown-toggle {
 	display: block;
 }
 
-.hentry {
-	margin: 0 0 1.5em;
-}
+
 
 .post,
 .page {
@@ -1163,10 +1213,11 @@ font-family: "Source Sans Pro, sans-serif;", "Lucida Grande", "Lucida sans Unico
 .entry-title a:focus, .entry-title a:hover {
 	border-bottom: 5px solid #89242c;
 }
-@media screen and (min-width: 600px){
+@media screen and (min-width: 900px){
 	.entry-title {
 		margin: 0.25em 0 0.5em;
         font-size: 3em;
+
 	}
 	a{
 		text-decoration: none;
@@ -1210,8 +1261,12 @@ font-family: "Source Sans Pro, sans-serif;", "Lucida Grande", "Lucida sans Unico
 
 }
 
+@media screen and (min-width: 600px) {
+	.entry-footer {
+		margin: 1.5em 0;
 
-
+	}
+}
 
 
 /*--------------------------------------------------------------
