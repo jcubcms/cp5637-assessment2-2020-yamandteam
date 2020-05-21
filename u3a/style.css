@@ -700,7 +700,8 @@ a:visited {
 }
 
 a:hover, a:focus, a:active {
-	color: #e81131;
+	color: #f305a4;
+	text-decoration: underline;
 
 
 
@@ -824,7 +825,7 @@ a:hover, a:active {
 	padding: 1em;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 700px) {
 	.site-content {
 		padding: 2em;
 	}
@@ -837,17 +838,19 @@ a:hover, a:active {
 }
 
 @media screen and (min-width: 900px) {
+	
 	.has-sidebar .hentry {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
 	}
 	.has-sidebar .hentry .entry-header {
-		width: 100%;
+		width: 50%;
 		flex: 1 0 100%;
 	}
 	.has-sidebar .hentry .post-content {
 		width: 65%;
+	
 	}
 	.has-sidebar .hentry .widget-area {
 		width: 30%;
@@ -1191,7 +1194,7 @@ button.dropdown-toggle {
 
 }
 .entry-header{
-font-family: "Source Sans Pro, sans-serif;", "Lucida Grande", "Lucida sans Unicode", "Lucida Sans", Arial, serifgitgit;
+
 }
 .cat-links{
 	font-weight:bold;
@@ -1211,10 +1214,10 @@ font-family: "Source Sans Pro, sans-serif;", "Lucida Grande", "Lucida sans Unico
 	font-size: 2.5em;
 }
 .entry-title a:focus, .entry-title a:hover {
-	border-bottom: 5px solid #89242c;
+
 }
 @media screen and (min-width: 900px){
-	.entry-title {
+	.cat-links >entry-title {
 		margin: 0.25em 0 0.5em;
         font-size: 3em;
 
@@ -1223,9 +1226,7 @@ font-family: "Source Sans Pro, sans-serif;", "Lucida Grande", "Lucida sans Unico
 		text-decoration: none;
 
 	}
-	a:focus,a:hover{
-	/*border-bottom: 5px solid black;*/
-	}
+
 }
 
 
@@ -1257,7 +1258,7 @@ font-family: "Source Sans Pro, sans-serif;", "Lucida Grande", "Lucida sans Unico
 .entry-meta a:focus, .entry-meta a:hover,
 .entry-footer a:focus,
 .entry-footer a:hover,.nav-previous a:focus,.nav-previous a:hover {
-	color: #f305a4;
+	text-decoration: underline;
 
 }
 
@@ -1272,14 +1273,6 @@ font-family: "Source Sans Pro, sans-serif;", "Lucida Grande", "Lucida sans Unico
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
-.comment-content a {
-	word-wrap: break-word;
-}
-
-.bypostauthor {
-	display: block;
-}
-
 
 /*--------------------------------------------------------------
 ## Footer

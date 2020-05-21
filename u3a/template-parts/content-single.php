@@ -29,8 +29,15 @@
 	</header><!-- .entry-header -->
 
 	<section class="post-content">
-
-    		
+        <?php
+        if ( !is_active_sidebar( 'sidebar-1' ) ) : ?>
+        <div class="post-content__wrap">
+            <div class="entry-meta">
+                <?php u3a_posted_on(); ?>
+            </div><!-- .entry-meta -->
+            <div class="post-content__body">
+        <?php
+        endif; ?>
 
     		<div class="entry-content">
     			<?php
@@ -58,7 +65,6 @@
     		<?php endif; ?>
 
     		<?php
-
 
     		// If comments are open or we have at least one comment, load up the comment template.
     		if ( comments_open() || get_comments_number() ) :
