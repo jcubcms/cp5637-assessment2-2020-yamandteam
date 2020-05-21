@@ -1279,7 +1279,79 @@ font-family: "Source Sans Pro, sans-serif;", "Lucida Grande", "Lucida sans Unico
 .bypostauthor {
 	display: block;
 }
+.comments-area {
+	width: 100%;
+	margin: 3em 0;
+	padding: 1.5em 0;
+	border-top: 1px solid #cccccc;
+}
 
+.comments-title {
+	font-weight: bold;
+	margin-bottom: 2em
+}
+
+.comment-list {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+
+.comment-list ol {
+	list-style-type: none;
+}
+
+.comment-body {
+	margin-bottom: 2em;
+	border-bottom: 1px solid #bbafaf;
+}
+
+.comment-meta {
+	font-size: 1em;
+	position: relative;
+	margin-left: 70px;
+
+}
+
+.comment-meta a,
+.comment-form a {
+	text-decoration:none;
+
+}
+
+.comment-meta a:hover, .comment-meta a:focus,
+.comment-form a:hover,
+.comment-form a:focus {
+	text-decoration: underline;
+	color: #f305a4;
+	
+}
+
+.comment .avatar {
+	position: absolute;
+	left:-80px;
+	top:0;
+	height: 60px;
+	width:60px;
+	border-radius: 30px;
+}
+
+.comment-metadata {
+	font-size:0.9em ;
+	margin-top: .2em;
+	padding-bottom: .5em;
+	line-height: 1em;
+	font-style:italic;
+}
+
+.comment-metadata a {
+	color: #b6b4b4;
+}
+
+.comment-author {
+	font-size: 1.2em;
+	line-height: 1.3em;
+}
 
 /*--------------------------------------------------------------
 ## Footer
