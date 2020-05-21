@@ -525,7 +525,7 @@ hr {
 
 ul,
 ol {
-	margin: 0 0 1.5em 3em;
+	margin: 0 0 0.3em 3em;
 }
 
 ul {
@@ -1434,34 +1434,82 @@ button.dropdown-toggle {
 }
 
 
-/*--------------------------------------------------------------
-## Footer
---------------------------------------------------------------*/
-.site-footer {
-	background: #39CCCC;
-	padding: 1em;
-	position:relative;
-	color: #fff;
-	text-align: center;
-	min-height: 4em;
-	float:left;
-	width:100%;
 
-
-
-}
 
 
 
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
+
 .widget {
 	margin: 0 0 1.5em;
+	padding: 0 0 2em;
 }
 
 .widget select {
 	max-width: 100%;
+}
+.widget-area {
+	margin-top:0em;
+	margin-left: 1.5em;
+
+}
+
+.widget ul li,
+.widget ol li {
+	display: block;
+	line-height: 2.2em;
+	
+}
+
+.widget ul,
+.widget ol {
+	margin-bottom: 0.5em;
+	list-style-type: none;
+	padding-left:0;
+}
+
+.widget-title {
+	margin-top: 0.5em;
+	margin-bottom: .5em;
+	font-size: 2em;
+	
+}
+
+/* Archive and Categories widgets */
+
+.widget_categories .children {
+	padding-top: 0.5em;
+}
+
+
+/* Pages and Menu widgets */
+.widget_pages .children,
+.widget_nav_menu .sub-menu {
+	
+	padding-bottom: .5em;
+	
+}
+
+.widget_pages a,
+.widget_nav_menu a {
+	display: block;
+	padding: 1em 0;
+	text-decoration: none;
+	border-bottom: 1px solid gray;
+}
+
+.widget_pages a:hover, .widget_pages a:focus,
+.widget_nav_menu a:hover,
+.widget_nav_menu a:focus {
+	text-decoration: none;
+	border-bottom: 1px dashed gray;
+}
+
+.widget_pages li,
+.widget_nav_menu li {
+	padding: 0;
 }
 
 /*--------------------------------------------------------------
