@@ -46,6 +46,7 @@ if ( ! function_exists( 'u3a_setup' ) ) :
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 		add_theme_support( 'post-thumbnails' );
+		add_image_size('u3a-full-bleed',2000,1200,true);
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(

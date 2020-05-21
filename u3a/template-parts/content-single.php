@@ -28,6 +28,8 @@
         endif; ?>
     </header><!-- .entry-header -->
 
+    <?php the_post_thumbnail('u3a-full-bleed');?>
+
     <section class="post-content">
         <?php
         if ( !is_active_sidebar( 'sidebar-1' ) ) : ?>
