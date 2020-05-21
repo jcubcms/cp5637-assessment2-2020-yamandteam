@@ -1279,7 +1279,145 @@ font-family: "Source Sans Pro, sans-serif;", "Lucida Grande", "Lucida sans Unico
 .bypostauthor {
 	display: block;
 }
+.comments-area {
+	width: 100%;
+	margin: 3em 0;
+	padding: 1.5em 0;
+	border-top: 1px solid #cccccc;
+}
 
+.comments-title {
+	font-weight: bold;
+	margin-bottom: 2em
+}
+
+.comment-list {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+
+.comment-list ol {
+	list-style-type: none;
+}
+
+.comment-body {
+	margin-bottom: 2em;
+	border-bottom: 1px solid #bbafaf;
+}
+
+.comment-meta {
+	font-size: 1em;
+	position: relative;
+	margin-left: 70px;
+
+}
+
+.comment-meta a,
+.comment-form a {
+	text-decoration:none;
+
+}
+
+.comment-meta a:hover, .comment-meta a:focus,
+.comment-form a:hover,
+.comment-form a:focus {
+	text-decoration: underline;
+	color: #f305a4;
+	
+}
+
+.comment .avatar {
+	position: absolute;
+	left:-80px;
+	top:0;
+	height: 60px;
+	width:60px;
+	border-radius: 30px;
+}
+
+.comment-metadata {
+	font-size:0.9em ;
+	margin-top: .2em;
+	padding-bottom: .5em;
+	line-height: 1em;
+	font-style:italic;
+}
+
+.comment-metadata a {
+	color: #b6b4b4;
+}
+
+.comment-author {
+	font-size: 1.2em;
+	line-height: 1.3em;
+}
+.reply {
+	margin-bottom: 1.5em;
+	text-align: right;
+	font-weight: bold;
+}
+
+.reply a ,.comment-form .form-submit input {
+	display: inline-block;
+	font-size:0.8em;
+	padding: .4em 1.5em;
+    text-transform: uppercase;
+	color: #000;
+	background: #f6d9d9;
+	line-height: 1.3em;
+	text-decoration: none;
+	border: 1px solid #c3c3c3;
+	border-radius: 5px;
+}
+
+.reply a:hover, .reply a:focus,.comment-form .form-submit input:hover, .comment-form .form-submit input:focus  {
+	color: #fff;
+	background: #f8022b;
+	border-color: #070001;
+}
+
+
+
+.bypostauthor .avatar {
+	box-sizing: content-box;
+	border: 5px solid #b51c35;
+	margin-top: -5px;
+	margin-left: -5px;
+}
+
+/* Comment Form */
+.comment-reply-title {
+	margin-bottom: 1em;
+}
+
+.comment-list .comment-reply-title {
+	text-align: left;
+}
+
+.comment-form {
+
+	line-height: 1.3em;
+}
+
+.comment-form a {
+	font-weight: 500;
+}
+
+.comment-form .form-submit {
+	text-align: right;
+}
+
+
+.comment-form label {
+	display:block;
+	padding-bottom: 0.5em;
+
+}
+
+.comment-form .required {
+	color: #f5071a;
+}
 
 /*--------------------------------------------------------------
 ## Footer
