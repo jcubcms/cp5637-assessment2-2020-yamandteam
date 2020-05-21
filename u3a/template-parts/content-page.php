@@ -49,6 +49,11 @@
 				'</span>'
 			);
 			?>
+			 <?php
+            if ( !is_active_sidebar( 'sidebar-1' ) ) : ?>
+                </div><!-- .post-content__body -->
+            </div><!-- .post-content__wrap -->
+            <?php endif; ?>
 		</footer><!-- .entry-footer -->
 	<?php endif; ?>
 </article><!-- #post-<?php the_ID(); ?> -->
