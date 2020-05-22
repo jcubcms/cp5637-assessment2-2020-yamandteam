@@ -9,7 +9,7 @@
 
 get_header();
 ?>
-
+    <div id="site-content" class="site-content-area">
 	<main id="primary" class="site-main">
 
 		<?php
@@ -30,6 +30,7 @@ get_header();
 		?>
 
 	</main><!-- #main -->
+    </div><!--#site-content->
 
 <?php
 get_footer();
