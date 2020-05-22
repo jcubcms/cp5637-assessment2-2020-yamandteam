@@ -390,6 +390,7 @@ h4,
 h5,
 h6 {
 	clear: both;
+	font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 
 }
 
@@ -525,7 +526,7 @@ hr {
 
 ul,
 ol {
-	margin: 0 0 0.3em 3em;
+	margin: 0 0 1.5em 1em;
 }
 
 ul {
@@ -553,6 +554,7 @@ dd {
 img {
 	height: auto;
 	max-width: 100%;
+	margin-top: 1em;
 }
 
 figure {
@@ -703,8 +705,6 @@ a:hover, a:focus, a:active {
 	color: #f305a4;
 	text-decoration: underline;
 
-
-
 }
 
 a:focus {
@@ -797,19 +797,19 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 # Alignments
 --------------------------------------------------------------*/
-.alignleft {
+.align-left {
 	float: left;
 	margin-right: 1.5em;
 	margin-bottom: 1.5em;
 }
 
-.alignright {
+.align-right {
 	float: right;
 	margin-left: 1.5em;
 	margin-bottom: 1.5em;
 }
 
-.aligncenter {
+.align-center {
 	clear: both;
 	display: block;
 	margin-left: auto;
@@ -823,6 +823,8 @@ a:hover, a:active {
 --------------------------------------------------------------*/
 .site-content {
 	padding: 1em;
+	max-width:1080px;
+	margin: 0 auto;
 }
 
 @media screen and (min-width: 700px) {
@@ -831,14 +833,18 @@ a:hover, a:active {
 	}
 }
 
-
-.site-content {
-	max-width:1080px;
-	margin: 0 auto;
+.entry-meta{
+	margin-bottom: 1em;
 }
 
 @media screen and (min-width: 900px) {
-	
+	.entry-title{
+		margin-right:75%;
+
+	}
+	.entry-meta{
+		margin-right: 50%;
+	}
 	.has-sidebar .hentry {
 		display: flex;
 		flex-wrap: wrap;
@@ -872,6 +878,104 @@ a:hover, a:active {
 
 
 
+/*--------------------------------------------------------------
+    ## Archives and index page
+    --------------------------------------------------------------*/
+.archive-view .post,
+.archive-view .page {
+	position: relative;
+	background: #f8f0f0;
+	padding: 1em;
+}
+
+
+@media screen and (min-width: 900px) {
+	.archive-view.has-sidebar .site-content-wrap {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.archive-view.has-sidebar .site-content-area {
+		width: 65%;
+	}
+
+	.archive-view.has-sidebar .widget-area {
+		width: 31%;
+
+	}
+}
+
+
+
+.page-header {
+	font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+}
+
+.page-title {
+	margin: 0 0 .5em;
+}
+
+.archive-description {
+	margin: -1em 0 2em;
+}
+
+/* For content-none.php */
+.search .page-content,
+.error-404 .page-content {
+	margin-bottom: 2em;
+	padding: 1em 2em;
+	font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	color: white;
+	background: #b51c35;
+}
+
+.search input[type="search"],
+.error-404 input[type="search"] {
+	padding: .5em;
+}
+
+.search input[type="submit"],
+.error-404 input[type="submit"] {
+	border-color: white;
+	color: white;
+}
+
+.search input[type="submit"]:focus, .search input[type="submit"]:hover,
+.error-404 input[type="submit"]:focus,
+.error-404 input[type="submit"]:hover {
+	color: black;
+}
+
+
+.index-image img {
+	display: block;
+	margin: 0 auto;
+}
+
+.index-image a:focus > img,
+.index-image a:hover > img {
+	opacity: .8;
+}
+
+.continue-reading {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+}
+
+.continue-reading a {
+	display: block;
+	padding: .5em 1em;
+	font-size: 90%;
+	text-decoration: none;
+	background: #d9d9d9;
+}
+
+.continue-reading a:focus, .continue-reading a:hover {
+	color: white;
+	background: #b51c35;
+}
 
 
 /*--------------------------------------------------------------
@@ -923,6 +1027,7 @@ a:hover, a:active {
 	flex-direction: column;
 	justify-content: center;
 	margin-left: 1em;
+	margin-top: 1em;
 }
 
 .site-title {
@@ -951,7 +1056,6 @@ a:hover, a:active {
 
 @media screen and (min-width: 900px) {
 	.site-header {
-		display: -ms-flexbox;
 		display: flex;
 		justify-content: space-between;
 	}
@@ -1348,7 +1452,6 @@ button.dropdown-toggle {
 }
 
 
-
 .reply {
 	margin-bottom: 1.5em;
 	text-align: right;
@@ -1435,191 +1538,197 @@ button.dropdown-toggle {
 
 
 
-
-
-
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
-
+.widget-area {
+	margin-top: 1.5em;
+}
 .widget {
 	margin: 0 0 1.5em;
 	padding: 0 0 2em;
 }
 
-.widget select {
-	max-width: 100%;
+/*Footer widgets for archive pages */
+@media screen and (min-width: 900px) {
+	.archive-view.has-sidebar {
+		width: 100%;
+	}
+
+	.widget select {
+		max-width: 100%;
+	}
+
+	.widget-area {
+		margin-top: 0em;
+		margin-left: 1.5em;
+
+	}
+
+	.widget ul li,
+	.widget ol li {
+		display: block;
+		line-height: 2.2em;
+
+	}
+
+	.widget ul,
+	.widget ol {
+		margin-bottom: 0.5em;
+		list-style-type: none;
+		padding-left: 0;
+	}
+
+	.widget-title {
+		margin-top: 0.5em;
+		margin-bottom: .5em;
+		font-size: 2em;
+
+	}
+
+	/* Archive and Categories widgets */
+	.widget_categories .children {
+		padding-top: 0.5em;
+	}
+
+
+	/* Pages and Menu widgets */
+	.widget_pages .children,
+	.widget_nav_menu .sub-menu {
+
+		padding-bottom: .5em;
+
+	}
+
+	.widget_pages a,
+	.widget_nav_menu a {
+		display: block;
+		padding: 1em 0;
+		text-decoration: none;
+		border-bottom: 1px solid gray;
+	}
+
+	.widget_pages a:hover, .widget_pages a:focus,
+	.widget_nav_menu a:hover,
+	.widget_nav_menu a:focus {
+		text-decoration: none;
+		border-bottom: 1px dashed gray;
+	}
+
+	.widget_pages li,
+	.widget_nav_menu li {
+		padding: 0;
+	}
+
+	/*--------------------------------------------------------------
+    # Infinite scroll
+    --------------------------------------------------------------*/
+	/* Hide the Posts Navigation and the Footer when Infinite Scroll is in use. */
+	.infinite-scroll .posts-navigation,
+	.infinite-scroll.neverending .site-footer {
+		display: none;
+	}
+
+	/* Re-display the Theme Footer when Infinite Scroll has reached its end. */
+	.infinity-end.neverending .site-footer {
+		display: block;
+	}
+
+	/*--------------------------------------------------------------
+    # Media
+    --------------------------------------------------------------*/
+	.page-content .wp-smiley,
+	.entry-content .wp-smiley,
+	.comment-content .wp-smiley {
+		border: none;
+		margin-bottom: 0;
+		margin-top: 0;
+		padding: 0;
+	}
+
+	/* Make sure embeds and iframes fit their containers. */
+	embed,
+	iframe,
+	object {
+		max-width: 100%;
+	}
+
+	/* Make sure logo link wraps around logo image. */
+	.custom-logo-link {
+		display: inline-block;
+	}
+
+	/*--------------------------------------------------------------
+    ## Captions
+    --------------------------------------------------------------*/
+	.wp-caption {
+		margin-bottom: 1.5em;
+		max-width: 100%;
+	}
+
+	.wp-caption img[class*="wp-image-"] {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.wp-caption .wp-caption-text {
+		margin: 0.8075em 0;
+	}
+
+	.wp-caption-text {
+		text-align: center;
+	}
+
+	/*--------------------------------------------------------------
+    ## Galleries
+    --------------------------------------------------------------*/
+	.gallery {
+		margin-bottom: 1.5em;
+		display: -ms-grid;
+		display: grid;
+		grid-gap: 1.5em;
+	}
+
+	.gallery-item {
+		display: inline-block;
+		text-align: center;
+		width: 100%;
+	}
+
+	.gallery-columns-2 .gallery-item {
+		max-width: 50%;
+	}
+
+	.gallery-columns-3 .gallery-item {
+		max-width: 33.33%;
+	}
+
+	.gallery-columns-4 .gallery-item {
+		max-width: 25%;
+	}
+
+	.gallery-columns-5 .gallery-item {
+		max-width: 20%;
+	}
+
+	.gallery-columns-6 .gallery-item {
+		max-width: 16.66%;
+	}
+
+	.gallery-columns-7 .gallery-item {
+		max-width: 14.28%;
+	}
+
+	.gallery-columns-8 .gallery-item {
+		max-width: 12.5%;
+	}
+
+	.gallery-columns-9 .gallery-item {
+		max-width: 11.11%;
+	}
+
+	.gallery-caption {
+		display: block;
+	}
 }
-.widget-area {
-	margin-top:0em;
-	margin-left: 1.5em;
-
-}
-
-.widget ul li,
-.widget ol li {
-	display: block;
-	line-height: 2.2em;
-	
-}
-
-.widget ul,
-.widget ol {
-	margin-bottom: 0.5em;
-	list-style-type: none;
-	padding-left:0;
-}
-
-.widget-title {
-	margin-top: 0.5em;
-	margin-bottom: .5em;
-	font-size: 2em;
-	
-}
-
-/* Archive and Categories widgets */
-
-.widget_categories .children {
-	padding-top: 0.5em;
-}
-
-
-/* Pages and Menu widgets */
-.widget_pages .children,
-.widget_nav_menu .sub-menu {
-	
-	padding-bottom: .5em;
-	
-}
-
-.widget_pages a,
-.widget_nav_menu a {
-	display: block;
-	padding: 1em 0;
-	text-decoration: none;
-	border-bottom: 1px solid gray;
-}
-
-.widget_pages a:hover, .widget_pages a:focus,
-.widget_nav_menu a:hover,
-.widget_nav_menu a:focus {
-	text-decoration: none;
-	border-bottom: 1px dashed gray;
-}
-
-.widget_pages li,
-.widget_nav_menu li {
-	padding: 0;
-}
-
-/*--------------------------------------------------------------
-# Infinite scroll
---------------------------------------------------------------*/
-/* Hide the Posts Navigation and the Footer when Infinite Scroll is in use. */
-.infinite-scroll .posts-navigation,
-.infinite-scroll.neverending .site-footer {
-	display: none;
-}
-
-/* Re-display the Theme Footer when Infinite Scroll has reached its end. */
-.infinity-end.neverending .site-footer {
-	display: block;
-}
-
-/*--------------------------------------------------------------
-# Media
---------------------------------------------------------------*/
-.page-content .wp-smiley,
-.entry-content .wp-smiley,
-.comment-content .wp-smiley {
-	border: none;
-	margin-bottom: 0;
-	margin-top: 0;
-	padding: 0;
-}
-
-/* Make sure embeds and iframes fit their containers. */
-embed,
-iframe,
-object {
-	max-width: 100%;
-}
-
-/* Make sure logo link wraps around logo image. */
-.custom-logo-link {
-	display: inline-block;
-}
-
-/*--------------------------------------------------------------
-## Captions
---------------------------------------------------------------*/
-.wp-caption {
-	margin-bottom: 1.5em;
-	max-width: 100%;
-}
-
-.wp-caption img[class*="wp-image-"] {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.wp-caption .wp-caption-text {
-	margin: 0.8075em 0;
-}
-
-.wp-caption-text {
-	text-align: center;
-}
-
-/*--------------------------------------------------------------
-## Galleries
---------------------------------------------------------------*/
-.gallery {
-	margin-bottom: 1.5em;
-	display: -ms-grid;
-	display: grid;
-	grid-gap: 1.5em;
-}
-
-.gallery-item {
-	display: inline-block;
-	text-align: center;
-	width: 100%;
-}
-.gallery-columns-2 .gallery-item {
-	max-width: 50%;
-}
-
-.gallery-columns-3 .gallery-item {
-	max-width: 33.33%;
-}
-
-.gallery-columns-4 .gallery-item {
-	max-width: 25%;
-}
-
-.gallery-columns-5 .gallery-item {
-	max-width: 20%;
-}
-
-.gallery-columns-6 .gallery-item {
-	max-width: 16.66%;
-}
-
-.gallery-columns-7 .gallery-item {
-	max-width: 14.28%;
-}
-
-.gallery-columns-8 .gallery-item {
-	max-width: 12.5%;
-}
-
-.gallery-columns-9 .gallery-item {
-	max-width: 11.11%;
-}
-
-.gallery-caption {
-	display: block;
-}
-

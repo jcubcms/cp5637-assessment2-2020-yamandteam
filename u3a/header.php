@@ -70,3 +70,4 @@
         </nav><!-- #site-navigation -->
 
     </header><!-- #masthead -->
+    <div id="content-wrap" class="site-content-wrap">
