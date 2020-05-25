@@ -1,4 +1,4 @@
-/*!
+﻿/*!
 Theme Name: u3a
 Theme URI: http://underscores.me/
 Author: Yam Bahadur Poudel
@@ -32,10 +32,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	## Menus
 # Accessibility
 # Alignments
-# Widgets
 # Content
+	## header
 	## Posts and pages
+	## Archives and index
 	## Comments
+	## Footer
+# Widgets
 # Infinite scroll
 # Media
 	## Captions
@@ -74,6 +77,8 @@ body {
 main {
 	display: block;
 }
+
+
 
 /**
  * Correct the font size and margin on `h1` elements within `section` and
@@ -395,19 +400,29 @@ h6 {
 }
 
 h1 {
-	font-size: 2.6em;
+	font-size: 2.4em;
+	text-transform: uppercase;
+	color: #000000;
+	text-decoration: underline;
+
 }
 
 h2 {
-	font-size: 2.4em;
+	font-size: 2em;
+	color: #cf2e2e;;
+
 }
 
+
+
+
 h3 {
-	font-size: 2.2em;
+	font-size: 1.8em;
+	color:#8ed1fc
 }
 
 h4 {
-	font-size: 1.8em;
+	font-size: 1.6em;
 }
 
 h5 {
@@ -514,14 +529,15 @@ html {
 }
 
 body {
-	background: #fff;
+	background: #ffffff;
 }
 
 hr {
-	background-color: #ccc;
-	border: 0;
-	height: 1px;
-	margin-bottom: 1.5em;
+
+	height:2px;
+	border:0;
+	background-color: #a7a1a1;
+	margin-bottom: 1em;
 }
 
 ul,
@@ -554,23 +570,23 @@ dd {
 img {
 	height: auto;
 	max-width: 100%;
-	margin-top: 1em;
+	
 }
 
 figure {
-	margin: 0;
+	margin: 0
+
 }
 
 table {
 	border-collapse: collapse;
 	margin: 0 0 1.5em;
 	width: 100%;
-
-
+	text-align: center;
 }
 
  th{
-	border-bottom: 2px solid #bbb;
+	border-bottom: 1px solid #bbb;
 	padding-bottom: .5em;
 }
 
@@ -821,6 +837,7 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Global layouts
 --------------------------------------------------------------*/
+
 .site-content {
 	padding: 1em;
 	max-width:1080px;
@@ -837,9 +854,10 @@ a:hover, a:active {
 	margin-bottom: 1em;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 700px) {
 	.entry-title{
 		margin-right:75%;
+
 
 	}
 	.entry-meta{
@@ -863,7 +881,7 @@ a:hover, a:active {
 	}
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 700px) {
 	.no-sidebar .post-content__wrap {
 		display: flex;
 		justify-content: space-between;
@@ -878,106 +896,11 @@ a:hover, a:active {
 
 
 
+
+
 /*--------------------------------------------------------------
-    ## Archives and index page
-    --------------------------------------------------------------*/
-.archive-view .post,
-.archive-view .page {
-	position: relative;
-	background: #f8f0f0;
-	padding: 1em;
-}
-
-
-@media screen and (min-width: 900px) {
-	.archive-view.has-sidebar .site-content-wrap {
-		display: flex;
-		flex-wrap: wrap;
-	}
-
-	.archive-view.has-sidebar .site-content-area {
-		width: 65%;
-	}
-
-	.archive-view.has-sidebar .widget-area {
-		width: 31%;
-
-	}
-}
-
-
-
-.page-header {
-	font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
-}
-
-.page-title {
-	margin: 0 0 .5em;
-}
-
-.archive-description {
-	margin: -1em 0 2em;
-}
-
-/* For content-none.php */
-.search .page-content,
-.error-404 .page-content {
-	margin-bottom: 2em;
-	padding: 1em 2em;
-	font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
-	color: white;
-	background: #b51c35;
-}
-
-.search input[type="search"],
-.error-404 input[type="search"] {
-	padding: .5em;
-}
-
-.search input[type="submit"],
-.error-404 input[type="submit"] {
-	border-color: white;
-	color: white;
-}
-
-.search input[type="submit"]:focus, .search input[type="submit"]:hover,
-.error-404 input[type="submit"]:focus,
-.error-404 input[type="submit"]:hover {
-	color: black;
-}
-
-
-.index-image img {
-	display: block;
-	margin: 0 auto;
-}
-
-.index-image a:focus > img,
-.index-image a:hover > img {
-	opacity: .8;
-}
-
-.continue-reading {
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
-}
-
-.continue-reading a {
-	display: block;
-	padding: .5em 1em;
-	font-size: 90%;
-	text-decoration: none;
-	background: #d9d9d9;
-}
-
-.continue-reading a:focus, .continue-reading a:hover {
-	color: white;
-	background: #b51c35;
-}
-
-
+# Content
+--------------------------------------------------------------*/
 /*--------------------------------------------------------------
 ## header
    --------------------------------------------------------------*/
@@ -994,83 +917,85 @@ a:hover, a:active {
 .site-header {
 	position: relative;
 	padding: 1em;
-	/*font-family: "Source Sans Pro, sans-serif;", "Lucida Grande", "Lucida sans Unicode", "Lucida Sans", Arial, serifgitgit;*/
+
 	color: #00d082;
 	background-color: #39CCCC;
 }
 
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 700px) {
 	.site-header {
 		padding: 1.5em;
 	}
 }
 
 .site-branding {
-	min-height: 70px;
-	display: -ms-flexbox;
-	display: flex;
-}
-
-.custom-logo-link {
-	margin-right: 1em;
-}
-
-.custom-logo-link img {
-	display: block;
-	height: 70px;
-	width: auto;
-}
-
-.site-branding-text {
-
-	display: block;
-	flex-direction: column;
-	justify-content: center;
-	margin-left: 1em;
-	margin-top: 1em;
-}
-
-.site-title {
-	font-size: 1.5em;
-	margin: 0;
-	padding: 0;
-	line-height: 1em;
-}
-
-.site-title a {
-	text-decoration: none;
-	color: #ffffff;
-}
-
-.site-title a:hover, .site-title a:focus {
-	text-decoration: underline;
-}
-
-.site-description {
-	color: #f10426;
-	font-size: 1em;
-	font-style: italic;
-	font-weight: 900;
-	text-shadow: 1px 1px #2dd51a;
-}
-
-@media screen and (min-width: 900px) {
-	.site-header {
+		min-height: 70px;
+		display: -ms-flexbox;
 		display: flex;
-		justify-content: space-between;
 	}
-	.site-branding {
-		width: 35%;
+
+	.custom-logo-link {
+		margin-right: 1em;
 	}
+
+	.custom-logo-link img {
+		display: block;
+		height: 70px;
+		width: auto;
+	}
+
+	.site-branding-text {
+
+		display: block;
+		flex-direction: column;
+		justify-content: center;
+		margin-left: 1em;
+	}
+
+	.site-title {
+		font-size: 1.5em;
+		margin: 0;
+		padding: 0;
+		line-height: 1em;
+	}
+
+	.site-title a {
+		text-decoration: none;
+		color: #ffffff;
+	}
+
+	.site-title a:hover, .site-title a:focus {
+		text-decoration: underline;
+	}
+
+	.site-description {
+		color: #f10426;
+		font-size: 1em;
+		font-style: italic;
+		font-weight: 900;
+		text-shadow: 1px 1px #2dd51a;
+	}
+
+	@media screen and (min-width: 900px) {
+		.site-header {
+			display: -ms-flexbox;
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.site-branding {
+			width: 35%;
+		}
+
 	.main-navigation {
 		width: 65%;
+		margin-top:1.5em;
 	}
 }
 
 /* header menu  or primary menu*/
 .main-navigation {
 	display: block;
-	/*font-family: "Source Sans Pro, sans-serif;", "Lucida Grande", "Lucida sans Unicode", "Lucida Sans", Arial, serifgitgit;*/
 	font-weight: 400;
 	clear: left;
 }
@@ -1079,7 +1004,6 @@ a:hover, a:active {
 	display: none;
 	list-style: none;
 	margin: 0;
-	padding-top: 1em;
 	padding-left: 0;
 }
 
@@ -1103,7 +1027,7 @@ a:hover, a:active {
 }
 
 .main-navigation ul ul a {
-	width: 200px;
+	width: 150px;
 }
 
 .main-navigation ul li:hover > ul,
@@ -1121,6 +1045,7 @@ a:hover, a:active {
 	padding: .5em 1em .5em 0;
 	text-decoration: none;
 	color: #fff;
+	text-transform: uppercase;
 }
 
 .main-navigation a:hover,
@@ -1130,7 +1055,7 @@ a:hover, a:active {
 
 .main-navigation .menu-item-has-children,
 .main-navigation .page_item_has_children {
-	min-width: 218px;
+	min-width: 150px;
 }
 
 .main-navigation .menu-item-has-children > a,
@@ -1162,7 +1087,6 @@ button.dropdown-toggle {
 	top: 0;
 	right: 0;
 	display: block;
-	margin: 1.2em 1.2em 0 0;
 	padding: .6em .8em;
 	font-size: 80%;
 	text-transform: uppercase;
@@ -1181,7 +1105,7 @@ button.dropdown-toggle {
 	display: block;
 }
 
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 700px) {
 	.menu-toggle {
 		display: none;
 	}
@@ -1211,7 +1135,6 @@ button.dropdown-toggle {
 	}
 
 	.main-navigation ul {
-		/*display: block;*/
 		display: flex;
 		flex-wrap: wrap;
 	}
@@ -1228,8 +1151,9 @@ button.dropdown-toggle {
 	}
 
 	.main-navigation ul ul li a {
-		width: 218px;
-		background: none;
+		min-width: 140px;
+}
+		
 	}
 
 	.main-navigation ul li a {
@@ -1244,7 +1168,7 @@ button.dropdown-toggle {
 
 	}
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 700px) {
 	.main-navigation ul {
 		-ms-flex-pack: end;
 		justify-content: flex-end;
@@ -1253,19 +1177,19 @@ button.dropdown-toggle {
 	}
 }
 
-/*--------------------------------------------------------------
-# Content
---------------------------------------------------------------*/
+
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
 .site-main {
 	padding: 1.5em;
+	padding-top:0em;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 700px) {
 	.site-main {
 		padding: 2em;
+		padding-top:0em; 
 	}
 }
 
@@ -1298,8 +1222,38 @@ button.dropdown-toggle {
 
 }
 .entry-header{
+	background-color: #ebe9e6;
+	margin-left:-2em;
+	margin-right: -2em;
+	padding-left: 2em; 
+	padding-top: 1em;
+	padding-bottom: 1em;
+
 
 }
+
+@media screen and (min-width: 700px) {
+	.entry-header {
+	background-color: #ebe9e6;
+	margin-left:-2em;
+	margin-right: -2em;
+	padding-left: 2em; 
+	padding-top: 1em;
+}
+
+.entry-title{
+	background-color: #ebe9e6;
+	
+
+
+}
+
+@media screen and (min-width: 700px) {
+	.entry-title {
+	background-color: #ebe9e6;
+	
+}
+
 .cat-links{
 	font-weight:bold;
 }
@@ -1314,14 +1268,11 @@ button.dropdown-toggle {
 
 }
 
-.entry-title{
-	font-size: 2.5em;
-}
 .entry-title a:focus, .entry-title a:hover {
 
 }
-@media screen and (min-width: 900px){
-	.cat-links >entry-title {
+@media screen and (min-width: 700px){
+	.cat-links.entry-title {
 		margin: 0.25em 0 0.5em;
         font-size: 3em;
 
@@ -1366,13 +1317,107 @@ button.dropdown-toggle {
 
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 700px) {
 	.entry-footer {
 		margin: 1.5em 0;
 
 	}
 }
+/*--------------------------------------------------------------
+## Archives and index
+--------------------------------------------------------------*/
+.archive-view .post,
+.archive-view .page {
+	position: relative;
+	padding: 1em;
+}
 
+
+@media screen and (min-width: 700px) {
+	.archive-view.has-sidebar .site-content-wrap {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.archive-view.has-sidebar .site-content-area {
+		width: 65%;
+	}
+
+	.archive-view.has-sidebar .widget-area {
+		width: 31%;
+
+	}
+}
+
+
+
+
+.page-title {
+	margin-left:0.5em;
+}
+
+.archive-description {
+	margin: -1em 0 2em;
+}
+
+/* For content-none.php */
+.search .page-content,
+.error-404 .page-content {
+	margin-bottom: 2em;
+	padding: 1em 2em;
+	font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	color: white;
+	background: #b51c35;
+}
+
+.search input[type="search"],
+.error-404 input[type="search"] {
+	padding: .5em;
+}
+
+.search input[type="submit"],
+.error-404 input[type="submit"] {
+	border-color: white;
+	color: white;
+}
+
+.search input[type="submit"]:focus, .search input[type="submit"]:hover,
+.error-404 input[type="submit"]:focus,
+.error-404 input[type="submit"]:hover {
+	color: black;
+}
+
+
+
+.index-image img {
+	display: block;
+	margin: 0 auto;
+}
+
+.index-image a:focus > img,
+.index-image a:hover > img {
+	opacity: .8;
+}
+
+.continue-reading {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+}
+
+.continue-reading a {
+	display: block;
+	padding: .5em 1em;
+	font-size: 90%;
+	text-decoration: none;
+	background: #d9d9d9;
+}
+
+.continue-reading a:focus, .continue-reading a:hover {
+	color: white;
+	background: #b51c35;
+}
 
 /*--------------------------------------------------------------
 ## Comments
@@ -1522,7 +1567,14 @@ button.dropdown-toggle {
 /*--------------------------------------------------------------
 ## Footer
 --------------------------------------------------------------*/
-.site-footer {
+/*.site-footer {
+	background: #39CCCC;
+
+	
+}*/
+
+@media screen and (min-width: 700px) {
+	.site-footer {
 	background: #39CCCC;
 	padding: 1em;
 	position:relative;
@@ -1531,10 +1583,8 @@ button.dropdown-toggle {
 	min-height: 4em;
 	float:left;
 	width:100%;
+	}
 
-
-
-}
 
 
 
@@ -1542,15 +1592,18 @@ button.dropdown-toggle {
 # Widgets
 --------------------------------------------------------------*/
 .widget-area {
-	margin-top: 1.5em;
+	margin-top: 5em;
+	background-color: #eee;
+	text-align: center;
 }
 .widget {
-	margin: 0 0 1.5em;
+	margin-top: 4em;
 	padding: 0 0 2em;
 }
 
+
 /*Footer widgets for archive pages */
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 700px) {
 	.archive-view.has-sidebar {
 		width: 100%;
 	}
@@ -1560,7 +1613,6 @@ button.dropdown-toggle {
 	}
 
 	.widget-area {
-		margin-top: 0em;
 		margin-left: 1.5em;
 
 	}
@@ -1570,6 +1622,7 @@ button.dropdown-toggle {
 		display: block;
 		line-height: 2.2em;
 
+
 	}
 
 	.widget ul,
@@ -1577,10 +1630,10 @@ button.dropdown-toggle {
 		margin-bottom: 0.5em;
 		list-style-type: none;
 		padding-left: 0;
+
 	}
 
 	.widget-title {
-		margin-top: 0.5em;
 		margin-bottom: .5em;
 		font-size: 2em;
 
